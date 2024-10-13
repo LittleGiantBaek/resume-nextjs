@@ -4,136 +4,138 @@ const programmingLanguages: ISkill.Skill = {
   category: 'Programming Languages',
   items: [
     {
+      title: 'JavaScript',
+      level: 3,
+    },
+    {
+      title: 'TypeScript',
+      level: 3,
+    },
+    {
+      title: 'HTML/CSS',
+      level: 3,
+    },
+    {
       title: 'C',
       level: 3,
     },
     {
-      title: 'Shell Scripting',
+      title: 'C++',
       level: 3,
     },
     {
-      title: 'Python',
+      title: 'Java',
       level: 3,
     },
     {
-      title: 'Perl',
-      level: 2,
+      title: 'SQL',
+      level: 3,
     },
     {
-      title: 'Golang',
-      level: 2,
-    },
-    {
-      title: 'Rust',
-      level: 1,
+      title: 'PL/SQL',
+      level: 3,
     },
   ],
 };
 
-const kernelDevelopment: ISkill.Skill = {
-  category: 'Kernel Development',
+const fameworksLibraries: ISkill.Skill = {
+  category: 'Frameworks & Libraries',
   items: [
     {
-      title: 'Kernel Programming',
+      title: 'React',
       level: 3,
     },
     {
-      title: 'GNU Debugger',
+      title: 'Spring Boot',
       level: 3,
     },
     {
-      title: 'Memory Management',
+      title: 'Electron',
       level: 2,
     },
     {
-      title: 'System Call Interface',
-      level: 2,
+      title: 'Node.js',
+      level: 3,
     },
   ],
 };
 
-const virtualization: ISkill.Skill = {
-  category: 'Virtualization',
+const infraDatabases: ISkill.Skill = {
+  category: 'Infrastructure & Databases',
   items: [
+    {
+      title: 'Kubernetes',
+      level: 2,
+    },
     {
       title: 'Docker',
-      level: 3,
-    },
-    {
-      title: 'KVM',
-      level: 3,
-    },
-    {
-      title: 'Xen',
       level: 2,
     },
     {
-      title: 'VirtualBox',
+      title: 'HyperCloud',
       level: 2,
     },
     {
-      title: 'VMware ESXi',
+      title: 'Webtob',
+      level: 2,
+    },
+    {
+      title: 'Apache',
       level: 1,
+    },
+    {
+      title: 'Kafka',
+      level: 1,
+    },
+    {
+      title: 'Tibero',
+      level: 3,
+    },
+    {
+      title: 'Redis',
+      level: 3,
+    },
+    {
+      title: 'MySQL',
+      level: 3,
     },
   ],
 };
 
-const automation: ISkill.Skill = {
-  category: 'Automation',
+const tools: ISkill.Skill = {
+  category: 'Tools',
   items: [
     {
-      title: 'Ansible',
-      level: 3,
-    },
-    {
-      title: 'Puppet',
-      level: 3,
-    },
-    {
-      title: 'Chef',
+      title: 'Webpack',
       level: 2,
     },
     {
-      title: 'Jenkins',
+      title: 'Babel',
       level: 2,
     },
     {
-      title: 'CI/CD Pipelines',
+      title: 'Gradle',
+      level: 2,
+    },
+    {
+      title: 'Maven',
+      level: 2,
+    },
+    {
+      title: 'Jest',
       level: 1,
     },
     {
-      title: 'Infrastructure as Code',
-      level: 1,
-    },
-  ],
-};
-
-const networkSecurity: ISkill.Skill = {
-  category: 'Network Security',
-  items: [
-    {
-      title: 'iptables',
-      level: 3,
+      title: 'Git',
     },
     {
-      title: 'OpenSSH',
-      level: 3,
+      title: 'VS Code',
     },
     {
-      title: 'OpenSSL',
-      level: 2,
+      title: 'Vim',
     },
     {
-      title: 'NACLs',
-      level: 2,
-    },
-    {
-      title: 'VPN Technologies',
-      level: 2,
-    },
-    {
-      title: 'Intrusion Detection',
-      level: 1,
+      title: 'IntelliJ IDEA',
     },
   ],
 };
@@ -142,23 +144,9 @@ const misc: ISkill.Skill = {
   category: 'Misc',
   items: [
     {
-      title: 'Coffee Brewing',
-    },
-    {
-      title: "Rubik's Cube Solving",
-    },
-    {
-      title: 'Table Tennis',
-    },
-    {
-      title: 'Guitar Playing',
-    },
-    {
-      title: 'Joke Telling',
-    },
-    {
-      title: 'Duct Tape Crafting',
-    },
+      title: 'Linux Ubuntu',
+      level: 2,
+    }
   ],
 };
 
@@ -166,10 +154,9 @@ const skill: ISkill.Payload = {
   disable: false,
   skills: [
     programmingLanguages,
-    kernelDevelopment,
-    virtualization,
-    automation,
-    networkSecurity,
+    fameworksLibraries,
+    infraDatabases,
+    tools,
     misc,
   ],
   tooltip: '1: 기초 수준\n2: 취미 개발 수준\n3: Production 개발 가능 수준',

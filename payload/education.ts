@@ -5,16 +5,16 @@ const education: IEducation.Payload = {
 
   list: [
     {
-      title: 'University of Open Source',
-      subTitle: 'PhD in System Engineering (Honorary)',
-      startedAt: '1991-03',
-      // endedAt: '2010-02',
+      title: '한국소프트웨어진흥협회(KOSTA)',
+      subTitle: '지능정보사회를 위한 응용 Web Framework 개발자 양성과정 교육 수료',
+      startedAt: '2018-02',
+      endedAt: '2018-06',
     },
     {
-      title: 'Antarctica High School',
-      subTitle: 'Graduated',
-      startedAt: '1989-03',
-      endedAt: '1991-02',
+      title: '아주대학교',
+      subTitle: '컴퓨터공학 학사 (졸)',
+      startedAt: '2015-03',
+      endedAt: '2018-02',
     },
   ],
 };

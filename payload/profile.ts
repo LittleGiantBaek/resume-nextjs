@@ -1,23 +1,22 @@
 import { faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
-import { faFacebook, faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faGithub, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
 import { faBell } from '@fortawesome/free-regular-svg-icons';
 import { IProfile } from '../component/profile/IProfile';
-import image from '../asset/sample_tux.png';
+import image from '../asset/profile.jpg';
 
 const profile: IProfile.Payload = {
   disable: false,
 
-  // image: 'https://resume.yowu.dev/static/image/profile_2019.png',
   image,
   name: {
-    title: 'Tux Linux Penguin',
-    small: '(Tux)',
+    title: '백승현',
+    small: '',
   },
   contact: [
     {
-      title: 'tux@linux.org',
-      link: 'mailto:tux@linux.org',
+      title: 'ffislfek@gmail.com',
+      link: 'mailto:ffislfek@gmail.com',
       icon: faEnvelope,
     },
     {
@@ -26,17 +25,22 @@ const profile: IProfile.Payload = {
       badge: true,
     },
     {
-      link: 'https://github.com/uyu423/resume-nextjs',
+      link: 'https://github.com/LittleGiantBaek',
       icon: faGithub,
     },
     {
-      link: 'https://www.facebook.com/groups/ubuntu.ko',
-      icon: faFacebook,
+      title: 'https://www.linkedin.com/in/승현-백-80ab96226/',
+      link: 'https://www.linkedin.com/in/%EC%8A%B9%ED%98%84-%EB%B0%B1-80ab96226/',
+      icon: faLinkedin,
+    },
+    {
+      link: 'https://www.instagram.com/l_giant_b/',
+      icon: faInstagram,
     },
   ],
   notice: {
     title:
-      "The content below is all fictitious and is just a sample from 'https://github.com/uyu423/resume-nextjs'.",
+      "이메일 또는 인스타그램 DM을 통해 연락 주시면 감사하겠습니다.",
     icon: faBell,
   },
 };

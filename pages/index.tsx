@@ -16,8 +16,9 @@ import { Skill } from '../component/skill';
 import { Style } from '../component/common/Style';
 import Payload from '../payload';
 import { Article } from '../component/article';
+import { Certificate } from '../component/certificate';
 
-function Yosume() {
+function ResumeComponent() {
   return (
     <>
       <NextSeo {...Payload._global.seo} />
@@ -35,6 +36,7 @@ function Yosume() {
         <Presentation.Component payload={Payload.presentation} />
         <Article.Component payload={Payload.article} />
         <Education.Component payload={Payload.education} />
+        <Certificate.Component payload={Payload.certificate} />
         <Etc.Component payload={Payload.etc} />
         <Footer.Component payload={Payload.footer} />
       </Container>
@@ -42,4 +44,4 @@ function Yosume() {
   );
 }
 
-export default Yosume;
+export default ResumeComponent;

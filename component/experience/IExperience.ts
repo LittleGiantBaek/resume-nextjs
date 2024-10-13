@@ -15,6 +15,11 @@ export declare namespace IExperience {
     disableTotalPeriod?: boolean;
   }
 
+  interface Description {
+    text: string;
+    subDescription?: string[]; // subDescription은 선택적으로 포함됨
+  }
+
   export interface Item {
     /** ### (직장)경험 명 */
     title: string;
@@ -46,7 +51,7 @@ export declare namespace IExperience {
      * @todo `IRow.Description[]` 으로 변경
      */
 
-    descriptions: string[];
+    descriptions: Description[];
     /**
      * ### (직장)경험의 키워드
      *
