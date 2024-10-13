@@ -6,7 +6,6 @@ import { CommonRows } from '../common/CommonRow';
 import { IRow } from '../common/IRow';
 import Util from '../common/Util';
 import { EmptyRowCol } from '../common';
-import { Style } from '../common/Style';
 
 export default function ProjectRow({ payload }: PropsWithChildren<{ payload: IProject.Payload }>) {
   return (
@@ -22,10 +21,9 @@ function createWorkingPeriod(startedAtString: string, endedAtString?: string) {
   const DATE_FORMAT = Util.LUXON_DATE_FORMAT;
   const startedAt = DateTime.fromFormat(startedAtString, DATE_FORMAT.YYYY_LL);
 
-  const { periodTitle, endedAt, isWorking } = (() => {
+  const { endedAt, isWorking } = (() => {
     if (!endedAtString) {
       return {
-        periodTitle: `${startedAt.toFormat(DATE_FORMAT.YYYY_DOT_LL)} ~`,
         isWorking: true,
         endedAt: undefined,
       };
@@ -33,9 +31,6 @@ function createWorkingPeriod(startedAtString: string, endedAtString?: string) {
 
     const _endedAt = DateTime.fromFormat(endedAtString, DATE_FORMAT.YYYY_LL);
     return {
-      periodTitle: `${startedAt.toFormat(DATE_FORMAT.YYYY_DOT_LL)} ~ ${_endedAt.toFormat(
-        DATE_FORMAT.YYYY_DOT_LL,
-      )}`,
       endedAt: _endedAt,
       isWorking: false,
     };
