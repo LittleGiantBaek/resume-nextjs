@@ -26,9 +26,7 @@ export default function ExperienceRow({
                 {description.subDescription && (
                   <ul>
                     {description.subDescription.map((subDesc, subDescIndex) => (
-                      <li key={`subDescription-${subDescIndex}`}>
-                        {subDesc}
-                      </li>
+                      <li key={`subDescription-${subDescIndex.toString()}`}>{subDesc}</li>
                     ))}
                   </ul>
                 )}

@@ -1,11 +1,11 @@
 import { DateTime } from 'luxon';
 import { PropsWithChildren } from 'react';
+import { Badge, Col, Row } from 'reactstrap';
 import { IProject } from './IProject';
 import { CommonRows } from '../common/CommonRow';
 import { IRow } from '../common/IRow';
 import Util from '../common/Util';
 import { EmptyRowCol } from '../common';
-import { Badge, Col, Row } from 'reactstrap';
 import { Style } from '../common/Style';
 
 export default function ProjectRow({ payload }: PropsWithChildren<{ payload: IProject.Payload }>) {
@@ -44,7 +44,9 @@ function createWorkingPeriod(startedAtString: string, endedAtString?: string) {
   return (
     <Row>
       <Col md={12} xs={isWorking ? 5 : 3} className="text-md-right text-center">
-        <Badge className="mr-1" color="info">{Util.getFormattingDuration(startedAt, endedAt)}</Badge>
+        <Badge className="mr-1" color="info">
+          {Util.getFormattingDuration(startedAt, endedAt)}
+        </Badge>
         {isWorking ? (
           <Badge color="primary" className="mr-1">
             +

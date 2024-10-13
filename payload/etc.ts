@@ -18,8 +18,8 @@ const etc: IEtc.Payload = {
         },
         {
           content: 'Kakao 지도, Tmap API 연동',
-        }
-      ]
+        },
+      ],
     },
     {
       title: '코인 자동매매 시스템',
@@ -27,12 +27,12 @@ const etc: IEtc.Payload = {
       endedAt: '2024-02',
       descriptions: [
         {
-          content: 'PineScript 및 Binance Webhook 기능을 통해 코인 자동매매 프로그램 개발'
+          content: 'PineScript 및 Binance Webhook 기능을 통해 코인 자동매매 프로그램 개발',
         },
         {
           content: '하이킨아시 ,  MACD 를 이용한 매매법 연구 및 구현',
-        }
-      ]
+        },
+      ],
     },
     {
       title: '크롤링을 통한 예약 현황 실시간 확인 시스템 ',
@@ -47,8 +47,8 @@ const etc: IEtc.Payload = {
         },
         {
           content: '예약 공석 발생시 Discord알림을 위한 Webhook 기능 연동',
-        }
-      ]
+        },
+      ],
     },
   ],
 };
