@@ -50,12 +50,12 @@ const fameworksLibraries: ISkill.Skill = {
       level: 3,
     },
     {
-      title: 'Electron',
-      level: 2,
-    },
-    {
       title: 'Node.js',
       level: 3,
+    },
+    {
+      title: 'Electron',
+      level: 2,
     },
   ],
 };
@@ -63,6 +63,18 @@ const fameworksLibraries: ISkill.Skill = {
 const infraDatabases: ISkill.Skill = {
   category: 'Infrastructure & Databases',
   items: [
+    {
+      title: 'Tibero',
+      level: 2,
+    },
+    {
+      title: 'Redis',
+      level: 2,
+    },
+    {
+      title: 'MySQL',
+      level: 2,
+    },
     {
       title: 'Kubernetes',
       level: 2,
@@ -87,18 +99,6 @@ const infraDatabases: ISkill.Skill = {
       title: 'Kafka',
       level: 1,
     },
-    {
-      title: 'Tibero',
-      level: 3,
-    },
-    {
-      title: 'Redis',
-      level: 3,
-    },
-    {
-      title: 'MySQL',
-      level: 3,
-    },
   ],
 };
 
@@ -107,23 +107,18 @@ const tools: ISkill.Skill = {
   items: [
     {
       title: 'Webpack',
-      level: 2,
     },
     {
       title: 'Babel',
-      level: 2,
     },
     {
       title: 'Gradle',
-      level: 2,
     },
     {
       title: 'Maven',
-      level: 2,
     },
     {
       title: 'Jest',
-      level: 1,
     },
     {
       title: 'Git',

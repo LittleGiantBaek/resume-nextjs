@@ -39,7 +39,7 @@ const profile: IProfile.Payload = {
     },
   ],
   notice: {
-    title: '이메일 또는 인스타그램 DM을 통해 연락 주시면 감사하겠습니다.',
+    title: '이메일을 통해 연락 주시면 감사하겠습니다.',
     icon: faBell,
   },
 };
