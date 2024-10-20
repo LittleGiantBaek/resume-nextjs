@@ -16,16 +16,16 @@ const programmingLanguages: ISkill.Skill = {
       level: 3,
     },
     {
-      title: 'C',
+      title: 'Java',
       level: 3,
+    },
+    {
+      title: 'C',
+      level: 2,
     },
     {
       title: 'C++',
-      level: 3,
-    },
-    {
-      title: 'Java',
-      level: 3,
+      level: 2,
     },
     {
       title: 'SQL',
