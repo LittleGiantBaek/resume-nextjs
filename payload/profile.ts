@@ -6,6 +6,7 @@ import { IProfile } from '../component/profile/IProfile';
 import image from '../asset/profile.jpg';
 
 const profile: IProfile.Payload = {
+  sectionId: 'PROFILE',
   disable: false,
 
   image,

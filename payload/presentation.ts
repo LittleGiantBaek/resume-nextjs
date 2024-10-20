@@ -2,7 +2,7 @@ import { IPresentation } from '../component/presentation/IPresentation';
 
 const presentation: IPresentation.Payload = {
   disable: true,
-
+  sectionId: 'presentation',
   list: [
     {
       title: '"Embracing Linux in the Age of Cloud Computing"',

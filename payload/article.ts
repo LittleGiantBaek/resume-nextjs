@@ -2,6 +2,7 @@ import { IArticle } from '../component/article/IArticle';
 
 const article: IArticle.Payload = {
   disable: true,
+  sectionId: 'article',
 
   list: [
     {

@@ -27,7 +27,7 @@ import { IGlobal } from '../component/common/IGlobal';
 import { IArticle } from '../component/article/IArticle';
 import { ICertificate } from '../component/certificate/ICertificate';
 
-const Payload: Payload = {
+export const Payload: Payload = {
   profile,
   introduce,
   skill,
@@ -44,7 +44,7 @@ const Payload: Payload = {
   _global,
 };
 
-interface Payload {
+export interface Payload {
   profile: IProfile.Payload;
   introduce: IIntroduce.Payload;
   skill: ISkill.Payload;
@@ -61,4 +61,16 @@ interface Payload {
   _global: IGlobal.Payload;
 }
 
-export default Payload;
+export const sectionIds = [
+  !Payload.profile.disable && Payload.profile.sectionId,
+  !Payload.introduce.disable && Payload.introduce.sectionId,
+  !Payload.skill.disable && Payload.skill.sectionId,
+  !Payload.experience.disable && Payload.experience.sectionId,
+  !Payload.project.disable && Payload.project.sectionId,
+  !Payload.openSource.disable && Payload.openSource.sectionId,
+  !Payload.presentation.disable && Payload.presentation.sectionId,
+  !Payload.article.disable && Payload.article.sectionId,
+  !Payload.education.disable && Payload.education.sectionId,
+  !Payload.certificate.disable && Payload.certificate.sectionId,
+  !Payload.etc.disable && Payload.etc.sectionId,
+].filter(Boolean) as string[];

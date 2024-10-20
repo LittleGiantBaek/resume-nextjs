@@ -146,6 +146,7 @@ const misc: ISkill.Skill = {
 };
 
 const skill: ISkill.Payload = {
+  sectionId: 'SKILL',
   disable: false,
   skills: [programmingLanguages, fameworksLibraries, infraDatabases, tools, misc],
   tooltip: '1: 기초 수준\n2: 취미 개발 수준\n3: Production 개발 가능 수준',

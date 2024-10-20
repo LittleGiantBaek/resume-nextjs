@@ -3,6 +3,7 @@ import { Container } from 'reactstrap';
 
 import Head from 'next/head';
 import { NextSeo } from 'next-seo';
+import { useLayoutEffect } from 'react';
 import { Education } from '../component/education';
 import { Etc } from '../component/etc';
 import { Experience } from '../component/experience';
@@ -14,11 +15,18 @@ import { Profile } from '../component/profile';
 import { Project } from '../component/project';
 import { Skill } from '../component/skill';
 import { Style } from '../component/common/Style';
-import Payload from '../payload';
+import { Payload } from '../payload';
 import { Article } from '../component/article';
 import { Certificate } from '../component/certificate';
+import { TableOfContents } from '../component/toc';
 
 function ResumeComponent() {
+  useLayoutEffect(() => {
+    if (window.location.hash) {
+      window.history.replaceState(null, '', window.location.pathname + window.location.search);
+    }
+  }, []);
+
   return (
     <>
       <NextSeo {...Payload._global.seo} />
@@ -40,6 +48,7 @@ function ResumeComponent() {
         <Etc.Component payload={Payload.etc} />
         <Footer.Component payload={Payload.footer} />
       </Container>
+      <TableOfContents.Component showToc />
     </>
   );
 }

@@ -2,6 +2,7 @@ import { IIntroduce } from '../component/introduce/IIntroduce';
 import { lastestUpdatedAt } from '../package.json';
 
 const introduce: IIntroduce.Payload = {
+  sectionId: 'INTRODUCE',
   disable: false,
 
   contents: [

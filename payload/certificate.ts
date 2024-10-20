@@ -2,6 +2,7 @@ import { ICertificate } from '../component/certificate/ICertificate';
 
 const certificate: ICertificate.Payload = {
   disable: false,
+  sectionId: 'CERTIFICATE',
 
   list: [
     {

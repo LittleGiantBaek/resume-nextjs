@@ -2,6 +2,7 @@ import { IOpenSource } from '../component/openSource/IOpenSource';
 
 const openSource: IOpenSource.Payload = {
   disable: true,
+  sectionId: 'openSource',
   list: [
     {
       title: 'Linux Kernal',
