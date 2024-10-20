@@ -2,8 +2,8 @@ import favicon from '../asset/favicon.ico';
 import previewImage from '../asset/preview.jpg';
 import { IGlobal } from '../component/common/IGlobal';
 
-const title = 'Resume_SeunghyunBaek';
-const description = "This is resume describing Seunghyun Baek's career";
+const title = 'Seunghyun Baek Resume | Developer Portfolio';
+const description = "Seunghyun Baek's career portfolio and resume as a developer.";
 
 export const _global: IGlobal.Payload = {
   favicon,
