@@ -7,6 +7,7 @@ const project: IProject.Payload = {
     {
       title: '클라우드 기반 ECM 제품 고도화',
       startedAt: '2023-01',
+      endedAt: '2024-10',
       where: 'hash화를 통한 스토리지 가용 용량 효율성 15% 확보',
       descriptions: [
         {
