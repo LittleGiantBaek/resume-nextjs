@@ -9,6 +9,7 @@ const experience: IExperience.Payload = {
       title: '티맥스 가이아',
       position: '팀원/시니어 연구 개발자',
       startedAt: '2020-08',
+      endedAt: '2024-10',
       descriptions: [
         { text: '클라우드 기반 ECM 제품 아키텍쳐 설계 & 사용자/관리자 기능 개발' },
         { text: 'Java Spring Framework를 이용한 RESTful 웹 서비스 개발' },
