@@ -1,6 +1,6 @@
-import { IExperience } from '../component/experience/IExperience';
+import { IWorkExperience } from '../component/workExperience/IWorkExperience';
 
-const experience: IExperience.Payload = {
+const experience: IWorkExperience.Payload = {
   sectionId: 'WORK EXPERIENCE',
   disable: false,
   disableTotalPeriod: false,
@@ -17,15 +17,15 @@ const experience: IExperience.Payload = {
         { text: '테스트 코드 & 코드 리뷰 & 아키텍처 개선을 통한 개발 환경 개선' },
         { text: '배달공제회, 서울시 교육청, 육군본부, 농어촌공사 사업 납품' },
       ],
-      skillKeywords: [
-        'Java',
-        'Spring Boot',
-        'TypeScript',
-        'React',
-        'Kafka',
-        'Tibero',
-        'Kubernetes',
-      ],
+      // skillKeywords: [
+      //   'Java',
+      //   'Spring Boot',
+      //   'TypeScript',
+      //   'React',
+      //   'Kafka',
+      //   'Tibero',
+      //   'Kubernetes',
+      // ],
     },
     {
       title: '티맥스 A&C',
@@ -49,7 +49,7 @@ const experience: IExperience.Payload = {
         },
         { text: '미래에셋, 디브레인, 케리스, SPC 사업 납품' },
       ],
-      skillKeywords: ['C', 'C++', 'JavaScript', 'Tibero', 'Kubernetes'],
+      // skillKeywords: ['C', 'C++', 'JavaScript', 'Tibero', 'Kubernetes'],
     },
   ],
 };

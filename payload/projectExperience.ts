@@ -1,14 +1,15 @@
-import { IProject } from '../component/project/IProject';
+import { IProjectExperience } from '../component/projectExperience/IProjectExperience';
 
-const project: IProject.Payload = {
+const experience: IProjectExperience.Payload = {
   sectionId: 'PROJECT EXPERIENCE',
   disable: false,
+  disableTotalPeriod: false,
   list: [
     {
       title: '클라우드 기반 ECM 제품 고도화',
       startedAt: '2023-01',
       endedAt: '2024-10',
-      where: 'hash화를 통한 스토리지 가용 용량 효율성 15% 확보',
+      performance: 'hash화를 통한 스토리지 가용 용량 효율성 15% 확보',
       descriptions: [
         {
           content: '1. 문서 파일의 hash화를 통한 파일 무결성 체크 및 운영 환경 스토리지 최적화',
@@ -40,7 +41,7 @@ const project: IProject.Payload = {
       title: '클라우드 기반 ECM 제품 FrontEnd/BackEnd 개발',
       startedAt: '2021-11',
       endedAt: '2023-01',
-      where:
+      performance:
         '적극적인 VOC 대응을 통해 서울시교육청, 육군본부, 농어촌공사에 제품을 납품 및 운영  ‘GS 인증’ 획득',
       descriptions: [
         {
@@ -83,7 +84,8 @@ const project: IProject.Payload = {
       title: '이미지 스트리밍 방식 WebOffice Mobile 웹앱 개발',
       startedAt: '2021-07',
       endedAt: '2021-10',
-      where: '모바일 웹뷰 환경에서의 이벤트 핸들링 경험 및 제한 사항 해결 과정을 통한 지식 습득',
+      performance:
+        '모바일 웹뷰 환경에서의 이벤트 핸들링 경험 및 제한 사항 해결 과정을 통한 지식 습득',
       descriptions: [
         {
           content: '1. hammer.js 를 통한 사용자 제스쳐 이벤트 핸들링 처리',
@@ -97,7 +99,7 @@ const project: IProject.Payload = {
       title: '이미지 스트리밍 방식 WebOffice FrontEnd/BackEnd 개발',
       startedAt: '2019-01',
       endedAt: '2021-06',
-      where:
+      performance:
         '제품의 초기 설계를 통한 프로토타입 개발부터 안정화까지 완료 및 로컬 Office 프로그램 기능의 90% 기능 제공. ',
       descriptions: [
         {
@@ -127,4 +129,4 @@ const project: IProject.Payload = {
   ],
 };
 
-export default project;
+export default experience;

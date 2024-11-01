@@ -1,6 +1,7 @@
 import { ICommon } from '../common/ICommon';
+import { IRow } from '../common/IRow';
 
-export declare namespace IExperience {
+export declare namespace IProjectExperience {
   /**
    * ### Sample Rendering
    *
@@ -15,17 +16,12 @@ export declare namespace IExperience {
     disableTotalPeriod?: boolean;
   }
 
-  interface Description {
-    text: string;
-    subDescription?: string[]; // subDescription은 선택적으로 포함됨
-  }
-
   export interface Item {
     /** ### (직장)경험 명 */
     title: string;
 
     /** ### (직장)역할 명 (or Subtitle) */
-    position: string;
+    performance: string;
 
     /**
      * ### (직장)경험 시작 일
@@ -51,7 +47,8 @@ export declare namespace IExperience {
      * @todo `IRow.Description[]` 으로 변경
      */
 
-    descriptions: Description[];
+    descriptions: IRow.Description[];
+
     /**
      * ### (직장)경험의 키워드
      *

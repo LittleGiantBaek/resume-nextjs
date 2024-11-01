@@ -5,12 +5,12 @@ import { EmptyRowCol } from '../common';
 import { PreProcessingComponent } from '../common/PreProcessingComponent';
 import { Style } from '../common/Style';
 import Util from '../common/Util';
-import { IExperience } from './IExperience';
-import ExperienceRow from './row';
+import { IWorkExperience } from './IWorkExperience';
+import ExperienceRow from './workRow';
 
-type Payload = IExperience.Payload;
+type Payload = IWorkExperience.Payload;
 
-export const Experience = {
+export const WorkExperience = {
   Component: ({ payload }: PropsWithChildren<{ payload: Payload }>) => {
     return PreProcessingComponent<Payload>({
       payload,
@@ -48,7 +48,7 @@ function Component({ payload }: PropsWithChildren<{ payload: Payload }>) {
   );
 }
 
-function getFormattingExperienceTotalDuration(payload: IExperience.Payload) {
+function getFormattingExperienceTotalDuration(payload: IWorkExperience.Payload) {
   const durations = payload.list
     .map((item) => {
       return {

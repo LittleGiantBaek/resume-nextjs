@@ -3,12 +3,13 @@ import { PropsWithChildren } from 'react';
 import { Badge, Col, Row } from 'reactstrap';
 import { Style } from '../common/Style';
 import Util from '../common/Util';
-import { IExperience } from './IExperience';
+import { IProjectExperience } from './IProjectExperience';
+import { CommonDescription } from '../common/CommonDescription';
 
-export default function ExperienceRow({
+export default function ProjectExperienceRow({
   item,
   index,
-}: PropsWithChildren<{ item: IExperience.Item; index: number }>) {
+}: PropsWithChildren<{ item: IProjectExperience.Item; index: number }>) {
   return (
     <div>
       {index > 0 ? <hr /> : ''}
@@ -18,22 +19,9 @@ export default function ExperienceRow({
         </Col>
         <Col sm={12} md={9}>
           <h4>{item.title}</h4>
-          <i style={Style.gray}>{item.position}</i>
-          <ul className="pt-3">
-            {item.descriptions.map((description, descIndex) => (
-              <li key={descIndex.toString()}>
-                {description.text}
-                {description.subDescription && (
-                  <ul>
-                    {description.subDescription.map((subDesc, subDescIndex) => (
-                      <li key={`subDescription-${subDescIndex.toString()}`}>{subDesc}</li>
-                    ))}
-                  </ul>
-                )}
-              </li>
-            ))}
-            {createSkillKeywords(item.skillKeywords)}
-          </ul>
+          <i style={Style.gray}>{item.performance}</i>
+          <CommonDescription descriptions={item.descriptions} option={{ padding: false }} />
+          {createSkillKeywords(item.skillKeywords)}
         </Col>
       </Row>
     </div>
