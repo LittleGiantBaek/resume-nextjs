@@ -20,20 +20,20 @@ const programmingLanguages: ISkill.Skill = {
       level: 3,
     },
     {
-      title: 'C',
-      level: 2,
-    },
-    {
-      title: 'C++',
-      level: 2,
-    },
-    {
       title: 'SQL',
       level: 3,
     },
     {
       title: 'PL/SQL',
       level: 3,
+    },
+    {
+      title: 'C',
+      level: 2,
+    },
+    {
+      title: 'C++',
+      level: 2,
     },
   ],
 };
@@ -43,19 +43,18 @@ const fameworksLibraries: ISkill.Skill = {
   items: [
     {
       title: 'React',
-      level: 3,
+    },
+    {
+      title: 'Next.js',
     },
     {
       title: 'Spring Boot',
-      level: 3,
     },
     {
       title: 'Node.js',
-      level: 3,
     },
     {
       title: 'Electron',
-      level: 2,
     },
   ],
 };
@@ -65,39 +64,27 @@ const infraDatabases: ISkill.Skill = {
   items: [
     {
       title: 'Tibero',
-      level: 2,
     },
     {
       title: 'Redis',
-      level: 2,
     },
     {
       title: 'MySQL',
-      level: 2,
     },
     {
       title: 'Kubernetes',
-      level: 2,
     },
     {
       title: 'Docker',
-      level: 2,
-    },
-    {
-      title: 'HyperCloud',
-      level: 2,
     },
     {
       title: 'Webtob',
-      level: 2,
     },
     {
       title: 'Apache',
-      level: 1,
     },
     {
       title: 'Kafka',
-      level: 1,
     },
   ],
 };
@@ -140,7 +127,6 @@ const misc: ISkill.Skill = {
   items: [
     {
       title: 'Linux Ubuntu',
-      level: 2,
     },
   ],
 };
