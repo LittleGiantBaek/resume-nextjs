@@ -9,7 +9,7 @@ const experience: IProjectExperience.Payload = {
       title: '클라우드 기반 ECM 제품 FrontEnd 고도화',
       startedAt: '2023-01',
       endedAt: '2024-10',
-      performance: '-',
+      performance: '',
       descriptions: [
         {
           content: '반응형 UI 최적화 및 접근성 개선',
@@ -19,8 +19,7 @@ const experience: IProjectExperience.Payload = {
                 '다양한 디바이스와 해상도에서 일관된 사용자 경험 제공을 위해 반응형 디자인 적용 및 최적화',
             },
             {
-              content:
-                '웹 접근성 표준을 준수하여 WAI-ARIA 속성을 추가하고, 화면 읽기 프로그램(Screen Reader) 호환성을 개선하여 접근성 강화',
+              content: '웹 접근성 표준을 준수하여 WAI-ARIA 속성을 추가',
             },
           ],
         },
@@ -38,13 +37,15 @@ const experience: IProjectExperience.Payload = {
           ],
         },
         {
-          content: '랜딩 페이지 성능 최적화',
+          content: '페이지 로딩 성능 최적화',
           descriptions: [
             {
-              content: 'React lazy loading, suspense 및 code splitting 적용을 통해',
+              content:
+                'React lazy loading, suspense 및 code splitting 적용을 통해 랜딩 페이지 로딩 속도 개선',
             },
             {
-              content: '썸네일 이미지 최적화를 통해 ',
+              content: '썸네일 이미지 최적화를 통해 문서 그리드뷰 로딩 속도 50% 개선',
+              weight: 'SEMI_BOLD',
             },
           ],
         },
@@ -55,7 +56,7 @@ const experience: IProjectExperience.Payload = {
       title: '클라우드 기반 ECM 제품 BackEnd 고도화',
       startedAt: '2023-01',
       endedAt: '2024-10',
-      performance: '-',
+      performance: '',
       descriptions: [
         {
           content: '문서 파일 무결성 검사 및 스토리지 최적화',
@@ -114,7 +115,7 @@ const experience: IProjectExperience.Payload = {
       title: '클라우드 기반 ECM 제품 FrontEnd 아키텍쳐 설계 및 개발',
       startedAt: '2021-11',
       endedAt: '2023-01',
-      performance: '-',
+      performance: '',
       descriptions: [
         {
           content: 'React + MobX 기반의 MVVM 패턴 적용 프로젝트 구축',
@@ -148,9 +149,9 @@ const experience: IProjectExperience.Payload = {
             { content: 'Jest와 Mock 컴포넌트를 이용한 Unit 및 Integration 테스트 환경 구축' },
             {
               content: '테스트 커버리지 80% 이상 유지를 통해 기능 안정성 확보',
-              weight: 'SEMI_BOLD',
             },
           ],
+          weight: 'SEMI_BOLD',
         },
       ],
       skillKeywords: ['TypeScript', 'React', 'Mobx'],
@@ -159,7 +160,7 @@ const experience: IProjectExperience.Payload = {
       title: '클라우드 기반 ECM 제품 BackEnd 아키텍쳐 설계 및 서비스 개발',
       startedAt: '2021-11',
       endedAt: '2023-01',
-      performance: ' - ',
+      performance: '',
       descriptions: [
         {
           content: 'Tibero RDBMS 기반 DB 스키마 설계',
@@ -214,14 +215,18 @@ const experience: IProjectExperience.Payload = {
       title: '이미지 스트리밍 방식 WebOffice Mobile 웹앱 개발',
       startedAt: '2021-07',
       endedAt: '2021-10',
-      performance:
-        '모바일 웹뷰 환경에서의 이벤트 핸들링 경험 및 제한 사항 해결 과정을 통한 지식 습득',
+      performance: '',
       descriptions: [
         {
-          content: '1. hammer.js 를 통한 사용자 제스쳐 이벤트 핸들링 처리',
+          content: 'React Native 웹뷰 환경 이벤트 핸들링 처리',
+          descriptions: [
+            {
+              content: 'hammer.js 를 통한 제스쳐 이벤트 기능 제공으로 사용자 경험 향상',
+            },
+          ],
         },
         {
-          content: '2. 모바일 Canvas 사이즈 제한 해결을 위한 이미지 타일링 방식 설계 및 개발 ',
+          content: '모바일 Canvas 사이즈 제한 해결을 위한 이미지 타일링 방식 설계 및 개발 ',
         },
       ],
       skillKeywords: ['React Native', 'WebSocket', 'HTML/CSS'],
@@ -230,18 +235,17 @@ const experience: IProjectExperience.Payload = {
       title: '이미지 스트리밍 방식 WebOffice FrontEnd/BackEnd 개발',
       startedAt: '2019-01',
       endedAt: '2021-06',
-      performance:
-        '제품의 초기 설계를 통한 프로토타입 개발부터 안정화까지 완료 및 로컬 Office 프로그램 기능의 90% 기능 제공. ',
+      performance: '',
       descriptions: [
         {
-          content: '1. epoll을 통한 이벤트 디스패칭 구조 및 초기 제품 아키텍쳐 설계 및 개발',
+          content: 'epoll을 통한 이벤트 디스패칭 구조 및 초기 제품 아키텍쳐 설계 및 개발',
         },
         {
           content:
-            '2. 사용자로부터 전달된 Input 이벤트를 OS의 이벤트 메세지 형태로 컨버팅 작업 및 다수 유저 대응 설계 및 개발',
+            '사용자로부터 전달된 Input 이벤트를 OS의 이벤트 메세지 형태로 컨버팅 작업 및 다수 유저 대응 설계 및 개발',
         },
         {
-          content: '3. 이미지 인코딩 최적화를 통한 메모리 효율 및 동시 접속 효율 향상',
+          content: '이미지 인코딩 최적화를 통한 메모리 효율 및 동시 접속 효율 향상',
           descriptions: [
             {
               content: '기존 단일 유저 접속 환경에서 동시 접속 대응을 위해 30명 동시 접속 안정화',
@@ -249,11 +253,8 @@ const experience: IProjectExperience.Payload = {
           ],
         },
         {
-          content: '4. 클립보드 기능 안정화를 위한 Chrome Extension 개발',
+          content: '클립보드 기능 안정화를 위한 Chrome Extension 개발',
           href: 'https://chrome-stats.com/d/eloangiofjdhgipcjbkpmaecgdcikjdh',
-        },
-        {
-          content: '5. 우정본 , 디브레인, SPC 사업 납품',
         },
       ],
       skillKeywords: ['C++', 'vanilla JS', 'WebSocket', 'HTML/CSS'],

@@ -20,7 +20,7 @@ const experience: IWorkExperience.Payload = {
         {
           text: '배달공제회, 서울시 교육청, 육군본부, 농어촌공사 사업 납품 및 VOC 대응',
           subDescription: [
-            '[TIPA 구매조건부 과제 : 클라우드 기반 지능형 문서관리 시스템 구축 (S3199585)',
+            'TIPA 구매조건부 과제 : 클라우드 기반 지능형 문서관리 시스템 구축 (S3199585)',
             'GS 인증 획득',
           ],
         },
@@ -36,6 +36,7 @@ const experience: IWorkExperience.Payload = {
           text: '이미지 스트리밍 방식의 Web Office 서버 아키텍쳐 설계 & FrontEnd/BackEnd 기능 개발',
           subDescription: [
             '로컬 오피스 프로그램을 서버에서 구동시켜 웹 환경에서 문서편집을 가능하게 하는 렌더링 서버',
+            '로컬 오피스 프로그램 기능셋 대비 90% 기능 제공',
           ],
         },
         {
