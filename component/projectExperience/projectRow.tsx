@@ -33,21 +33,22 @@ function createSkillKeywords(skillKeywords?: string[]) {
     return '';
   }
   return (
-    <li>
+    <div>
       <strong>Skill Keywords</strong>
       <div>
         {skillKeywords.map((keyword, index) => (
           <Badge
             style={Style.skillKeywordBadge}
             key={index.toString()}
-            color="secondary"
+            // color="success"
+            color="warning"
             className="mr-1"
           >
             {keyword}
           </Badge>
         ))}
       </div>
-    </li>
+    </div>
   );
 }
 

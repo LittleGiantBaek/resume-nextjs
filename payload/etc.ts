@@ -44,7 +44,7 @@ const etc: IEtc.Payload = {
           content: '사내 건강관리실 예약 현황 폴링을 위한 크롤링 서버 개발',
         },
         {
-          content: '크롤링을 위한 모듈 분석 및 사용',
+          content: 'Puppeteer를 활용한 동적 페이지 크롤링 기능 개발',
         },
         {
           content: '예약 공석 발생시 Discord알림을 위한 Webhook 기능 연동',
