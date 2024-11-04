@@ -24,15 +24,23 @@ const experience: IProjectExperience.Payload = {
           ],
         },
         {
-          content: '무한 스크롤 기능 추가를 통한 사용자 경험 개선',
+          content: 'UI 고도화를 통한 사용자 경험 개선',
           descriptions: [
             {
-              content:
-                '무한 스크롤을 통한 데이터 로딩 최적화로 페이지 로딩 속도 개선 및 사용자 경험 강화',
+              content: ' React Dnd를 사용한 드래깅 커스텀 컴포넌트 개발',
             },
             {
-              content:
-                '가상 스크롤(Virtual Scrolling) 기법을 도입하여 대량 데이터 렌더링 시 메모리 사용량을 줄이고 스크롤 성능을 최적화',
+              content: '무한 스크롤 기능 추가를 통한 사용자 경험 개선',
+              descriptions: [
+                {
+                  content:
+                    '무한 스크롤을 통한 데이터 로딩 최적화로 페이지 로딩 속도 개선 및 사용자 경험 강화',
+                },
+                {
+                  content:
+                    '가상 스크롤 적용을 통해 대량 데이터 렌더링 시 메모리 사용량 감소 및 스크롤 성능 최적화',
+                },
+              ],
             },
           ],
         },
@@ -41,7 +49,7 @@ const experience: IProjectExperience.Payload = {
           descriptions: [
             {
               content:
-                'React lazy loading, suspense 및 code splitting 적용을 통해 랜딩 페이지 로딩 속도 개선',
+                'React lazy를 통한 code splitting 및 suspense 적용을 통해 랜딩 페이지 로딩 속도 및 사용자 경험 개선',
             },
             {
               content: '썸네일 이미지 최적화를 통해 문서 그리드뷰 로딩 속도 50% 개선',
@@ -167,6 +175,8 @@ const experience: IProjectExperience.Payload = {
           descriptions: [
             {
               content: '유저 그룹 기반 보안 정책 수립(RBAC) DB 스키마 설계',
+              href:
+                'https://velog.io/@littlegiant/RBAC%EC%97%90-%EB%8C%80%ED%95%B4-%EC%95%8C%EC%95%84%EB%B3%B4%EC%9E%90',
             },
             {
               content: '문서, 폴더 엔티티 설계',
