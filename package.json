@@ -7,9 +7,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "cross-env DEBUG=shdebug:* NODE_OPTIONS=--openssl-legacy-provider next",
-    "build": "cross-env NODE_OPTIONS=--openssl-legacy-provider next build",
+    "build": "next build",
     "prebuild": "npm install",
-    "start": "cross-env NODE_OPTIONS=--openssl-legacy-provider next start",
+    "start": "next start",
     "export:with-typedoc": "npm run export && npm run typedoc",
     "export": "cross-env NODE_ENV=production next export --outdir docs/",
     "preexport": "npm run clean && npm run build",
