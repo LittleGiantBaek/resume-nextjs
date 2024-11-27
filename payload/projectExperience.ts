@@ -12,6 +12,19 @@ const experience: IProjectExperience.Payload = {
       performance: '',
       descriptions: [
         {
+          content: '페이지 로딩 성능 최적화',
+          descriptions: [
+            {
+              content:
+                'React lazy를 통한 code splitting 및 suspense 적용을 통해 랜딩 페이지 로딩 속도 및 사용자 경험 개선',
+            },
+            {
+              content: '썸네일 이미지 최적화를 통해 문서 그리드뷰 로딩 속도 50% 개선',
+              weight: 'SEMI_BOLD',
+            },
+          ],
+        },
+        {
           content: '반응형 UI 최적화 및 접근성 개선',
           descriptions: [
             {
@@ -44,83 +57,70 @@ const experience: IProjectExperience.Payload = {
             },
           ],
         },
-        {
-          content: '페이지 로딩 성능 최적화',
-          descriptions: [
-            {
-              content:
-                'React lazy를 통한 code splitting 및 suspense 적용을 통해 랜딩 페이지 로딩 속도 및 사용자 경험 개선',
-            },
-            {
-              content: '썸네일 이미지 최적화를 통해 문서 그리드뷰 로딩 속도 50% 개선',
-              weight: 'SEMI_BOLD',
-            },
-          ],
-        },
       ],
       skillKeywords: ['JavaScript', 'TypeScript', 'React', 'Mobx', 'Websocket'],
     },
+    // {
+    //   title: '클라우드 기반 ECM 제품 BackEnd 고도화',
+    //   startedAt: '2023-01',
+    //   endedAt: '2024-10',
+    //   performance: '',
+    //   descriptions: [
+    //     {
+    //       content: '문서 파일 무결성 검사 및 스토리지 최적화',
+    //       descriptions: [
+    //         {
+    //           content:
+    //             '문서 파일의 해시(hash) 값을 이용한 파일 무결성 검사를 구현하여 데이터 일관성 확보 및 파일 중복 저장 방지',
+    //         },
+    //         {
+    //           content:
+    //             '해시화를 통한 스토리지 자원 활용 효율화로 스토리지 용량 사용 효율성을 15% 개선',
+    //           weight: 'SEMI_BOLD',
+    //         },
+    //       ],
+    //     },
+    //     {
+    //       content: 'PL/SQL을 활용한 Batch 쿼리 성능 최적화',
+    //       descriptions: [
+    //         {
+    //           content:
+    //             '대규모 데이터 처리에 최적화된 Batch 쿼리 적용 및 PL/SQL 성능 개선으로 쿼리 실행 속도 20% 향상',
+    //           weight: 'SEMI_BOLD',
+    //         },
+    //       ],
+    //     },
+    //     {
+    //       content: '대용량 파일 업로드/다운로드 기능 고도화',
+    //       descriptions: [
+    //         {
+    //           content:
+    //             'Chunk 단위 전송을 통한 대용량 파일 업로드 및 다운로드 성능 개선으로 네트워크 안정성 향상',
+    //         },
+    //         {
+    //           content:
+    //             'WebSocket을 활용하여 대용량 파일의 업로드/다운로드 과정에서 HTTP 연결 부담을 줄이고, 전송 효율을 최적화',
+    //         },
+    //       ],
+    //     },
+    //     {
+    //       content: '실시간 데이터 처리 및 다중 유저 환경 대응',
+    //       descriptions: [
+    //         {
+    //           content:
+    //             'Kafka와 WebSocket을 통해 실시간 데이터 처리를 구현하여, 다중 유저 환경에서도 안정적인 문서 CRUD 작업 지원',
+    //         },
+    //         {
+    //           content:
+    //             '다중 사용자 환경에서 문서에 대한 변경 사항을 실시간으로 반영하여 사용자 경험 개선 및 시스템 응답 속도 최적화',
+    //         },
+    //       ],
+    //     },
+    //   ],
+    //   skillKeywords: ['Spring Boot', 'Kafka', 'PL/SQL'],
+    // },
     {
-      title: '클라우드 기반 ECM 제품 BackEnd 고도화',
-      startedAt: '2023-01',
-      endedAt: '2024-10',
-      performance: '',
-      descriptions: [
-        {
-          content: '문서 파일 무결성 검사 및 스토리지 최적화',
-          descriptions: [
-            {
-              content:
-                '문서 파일의 해시(hash) 값을 이용한 파일 무결성 검사를 구현하여 데이터 일관성 확보 및 파일 중복 저장 방지',
-            },
-            {
-              content:
-                '해시화를 통한 스토리지 자원 활용 효율화로 스토리지 용량 사용 효율성을 15% 개선',
-              weight: 'SEMI_BOLD',
-            },
-          ],
-        },
-        {
-          content: 'PL/SQL을 활용한 Batch 쿼리 성능 최적화',
-          descriptions: [
-            {
-              content:
-                '대규모 데이터 처리에 최적화된 Batch 쿼리 적용 및 PL/SQL 성능 개선으로 쿼리 실행 속도 20% 향상',
-              weight: 'SEMI_BOLD',
-            },
-          ],
-        },
-        {
-          content: '대용량 파일 업로드/다운로드 기능 고도화',
-          descriptions: [
-            {
-              content:
-                'Chunk 단위 전송을 통한 대용량 파일 업로드 및 다운로드 성능 개선으로 네트워크 안정성 향상',
-            },
-            {
-              content:
-                'WebSocket을 활용하여 대용량 파일의 업로드/다운로드 과정에서 HTTP 연결 부담을 줄이고, 전송 효율을 최적화',
-            },
-          ],
-        },
-        {
-          content: '실시간 데이터 처리 및 다중 유저 환경 대응',
-          descriptions: [
-            {
-              content:
-                'Kafka와 WebSocket을 통해 실시간 데이터 처리를 구현하여, 다중 유저 환경에서도 안정적인 문서 CRUD 작업 지원',
-            },
-            {
-              content:
-                '다중 사용자 환경에서 문서에 대한 변경 사항을 실시간으로 반영하여 사용자 경험 개선 및 시스템 응답 속도 최적화',
-            },
-          ],
-        },
-      ],
-      skillKeywords: ['Spring Boot', 'Kafka', 'PL/SQL'],
-    },
-    {
-      title: '클라우드 기반 ECM 제품 FrontEnd 아키텍쳐 설계 및 개발',
+      title: '클라우드 기반 ECM 제품 FrontEnd 프로젝트 구축 및 개발',
       startedAt: '2021-11',
       endedAt: '2023-01',
       performance: '',
@@ -129,20 +129,23 @@ const experience: IProjectExperience.Payload = {
           content: 'React + MobX 기반의 MVVM 패턴 적용 프로젝트 구축',
         },
         {
-          content: '사용자 인터페이스 개발',
-          descriptions: [
-            { content: '제품 랜딩 페이지 개발' },
-            { content: '관리자 설정 페이지 개발' },
-          ],
-        },
-        {
           content: '공통 컴포넌트 및 모듈 개발을 통해 사용자 경험 및 개발자 경험 개선',
           descriptions: [
             {
               content:
                 '주요 UI Wrapping 컴포넌트(툴팁, 다이얼로그, 토스트 메시지, 드롭다운) 개발을 통해 일관된 사용자 경험 제공',
             },
-            { content: '제품 내 공통 컴포넌트 재사용률 90% 이상 향상을 통해 개발 속도 개선' },
+            {
+              content: '제품 내 공통 컴포넌트 재사용률 90% 이상 향상을 통해 개발 속도 개선',
+              weight: 'SEMI_BOLD',
+            },
+          ],
+        },
+        {
+          content: '사용자 인터페이스 개발',
+          descriptions: [
+            { content: '제품 랜딩 페이지 개발' },
+            { content: '관리자 설정 페이지 개발' },
           ],
         },
         {
@@ -162,65 +165,65 @@ const experience: IProjectExperience.Payload = {
           weight: 'SEMI_BOLD',
         },
       ],
-      skillKeywords: ['TypeScript', 'React', 'Mobx'],
+      skillKeywords: ['JavaScript', 'TypeScript', 'React', 'Mobx'],
     },
-    {
-      title: '클라우드 기반 ECM 제품 BackEnd 아키텍쳐 설계 및 서비스 개발',
-      startedAt: '2021-11',
-      endedAt: '2023-01',
-      performance: '',
-      descriptions: [
-        {
-          content: 'Tibero RDBMS 기반 DB 스키마 설계',
-          descriptions: [
-            {
-              content: '유저 그룹 기반 보안 정책 수립(RBAC) DB 스키마 설계',
-              href:
-                'https://velog.io/@littlegiant/RBAC%EC%97%90-%EB%8C%80%ED%95%B4-%EC%95%8C%EC%95%84%EB%B3%B4%EC%9E%90',
-            },
-            {
-              content: '문서, 폴더 엔티티 설계',
-            },
-          ],
-        },
-        {
-          content: 'Spring Boot 서버 구축 및 서비스 개발',
-          descriptions: [
-            {
-              content: '파일 업로드/다운로드 서비스 개발',
-              descriptions: [
-                {
-                  content: 'MultipartFile 파일 업로드 서비스 개발',
-                },
-                {
-                  content:
-                    'apache compress 라이브러리를 사용한 다중 파일 압축 및 다운로드 서비스 개발',
-                },
-              ],
-            },
-            {
-              content: '유저의 문서 접근에 대한 인가 서비스 개발',
-            },
-          ],
-        },
-        {
-          content: '비정형 데이터의 DB 저장 관리 기술 연구 및 적용',
-          descriptions: [
-            {
-              content: 'Office 문서의 DB화를 위한 핵심 기능 개발',
-              descriptions: [
-                { content: 'OOXML 스펙 기반 문서데이터 parser 및 writer 모듈 개발' },
-                { content: 'Formula Parsing을 위한 Parser 개발 (javacc, pegjs) ' },
-              ],
-            },
-            {
-              content: 'apache pdfbox를 활용한 PDF 컨텐츠 데이터 DB화 기능 개발',
-            },
-          ],
-        },
-      ],
-      skillKeywords: ['Java', 'Spring Boot', 'Tibero', 'MyBatis'],
-    },
+    // {
+    //   title: '클라우드 기반 ECM 제품 BackEnd 아키텍쳐 설계 및 서비스 개발',
+    //   startedAt: '2021-11',
+    //   endedAt: '2023-01',
+    //   performance: '',
+    //   descriptions: [
+    //     {
+    //       content: 'Tibero RDBMS 기반 DB 스키마 설계',
+    //       descriptions: [
+    //         {
+    //           content: '유저 그룹 기반 보안 정책 수립(RBAC) DB 스키마 설계',
+    //           href:
+    //             'https://velog.io/@littlegiant/RBAC%EC%97%90-%EB%8C%80%ED%95%B4-%EC%95%8C%EC%95%84%EB%B3%B4%EC%9E%90',
+    //         },
+    //         {
+    //           content: '문서, 폴더 엔티티 설계',
+    //         },
+    //       ],
+    //     },
+    //     {
+    //       content: 'Spring Boot 서버 구축 및 서비스 개발',
+    //       descriptions: [
+    //         {
+    //           content: '파일 업로드/다운로드 서비스 개발',
+    //           descriptions: [
+    //             {
+    //               content: 'MultipartFile 파일 업로드 서비스 개발',
+    //             },
+    //             {
+    //               content:
+    //                 'apache compress 라이브러리를 사용한 다중 파일 압축 및 다운로드 서비스 개발',
+    //             },
+    //           ],
+    //         },
+    //         {
+    //           content: '유저의 문서 접근에 대한 인가 서비스 개발',
+    //         },
+    //       ],
+    //     },
+    //     {
+    //       content: '비정형 데이터의 DB 저장 관리 기술 연구 및 적용',
+    //       descriptions: [
+    //         {
+    //           content: 'Office 문서의 DB화를 위한 핵심 기능 개발',
+    //           descriptions: [
+    //             { content: 'OOXML 스펙 기반 문서데이터 parser 및 writer 모듈 개발' },
+    //             { content: 'Formula Parsing을 위한 Parser 개발 (javacc, pegjs) ' },
+    //           ],
+    //         },
+    //         {
+    //           content: 'apache pdfbox를 활용한 PDF 컨텐츠 데이터 DB화 기능 개발',
+    //         },
+    //       ],
+    //     },
+    //   ],
+    //   skillKeywords: ['Java', 'Spring Boot', 'Tibero', 'MyBatis'],
+    // },
     {
       title: '이미지 스트리밍 방식 WebOffice Mobile 웹앱 개발',
       startedAt: '2021-07',
