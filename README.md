@@ -11,12 +11,13 @@
 ## 요구사항
 
 - Node.js 22.x (`.nvmrc` 참고, `nvm use` 로 맞출 수 있다)
+- pnpm (`corepack enable pnpm` 또는 `npm i -g pnpm`)
 
 ## 시작하기
 
 ```bash
-npm install
-npm run dev       # http://localhost:3000
+pnpm install
+pnpm dev          # http://localhost:3000
 ```
 
 ## 프로젝트 구조
@@ -51,16 +52,26 @@ scripts/
    - 새 섹션을 추가하려면 (1) `types/resume.ts` 에 타입 추가 → (2) `data/<section>.ts` 작성 →
      (3) `data/index.ts` 의 `resume`/`SECTION_ORDER` 에 등록 → (4) `components/sections/<section>/`
      컴포넌트 작성 → (5) `components/sections/registry.tsx` 에 매핑을 추가한다.
-2. `npm run export` 를 실행한다. `docs/` 디렉토리가 최신 빌드로 갱신된다.
+2. `pnpm run export` 를 실행한다. `docs/` 디렉토리가 최신 빌드로 갱신된다.
    - 배포 전 결과물을 미리 보려면 `npx serve docs` (또는 `python3 -m http.server -d docs 8000`) 로 확인한다.
 3. 변경된 `docs/` 를 포함해 커밋 & push 하면 GitHub Pages 에 반영된다.
 
 ```bash
-npm run export
+pnpm run export
 git add -A
 git commit -m "chore: 이력 업데이트"
 git push
 ```
+
+## PDF 저장
+
+화면 우측 하단의 **PDF 저장** 버튼을 누르면 브라우저 인쇄 다이얼로그가 열리고, 대상에서 "PDF로 저장"을
+선택하면 된다. `app/globals.css` 의 `@media print` 규칙이 지면을 최적화한다:
+
+- 문단·불릿·Skill Keywords 뱃지가 페이지 경계에서 잘리지 않는다.
+- 항목 제목만 페이지 하단에 남는 것(고아 제목)을 방지한다.
+- TOC·PDF 버튼 등 화면 전용 요소는 인쇄물에서 제외된다 (`no-print` 클래스).
+- 뱃지 배경색은 브라우저의 "배경 그래픽" 옵션과 무관하게 유지된다 (`print-color-adjust: exact`).
 
 ## Analytics 설정 방법
 
@@ -88,7 +99,7 @@ export const site: SiteConfig = {
 ## Export / GitHub Pages 배포
 
 ```bash
-npm run export
+pnpm run export
 ```
 
 - 내부적으로 `docs/`, `.next/`, `out/` 를 정리한 뒤 `next build` (output: 'export') 로 `out/` 을 생성하고,
@@ -101,7 +112,7 @@ npm run export
 > 의 `main` 브랜치 루트에서 서빙된다. 따라서 배포하려면 `docs/` 의 내용을 해당 저장소 루트에 복사해서 push 해야 한다.
 >
 > ```bash
-> npm run export
+> pnpm run export
 > cp -R docs/. ../LittleGiantBaek.github.io/   # Pages 저장소 로컬 경로에 맞게 조정
 > cd ../LittleGiantBaek.github.io && git add -A && git commit -m "deploy" && git push
 > ```
@@ -110,6 +121,7 @@ npm run export
 
 - Next.js 16 (App Router, `output: 'export'`)
 - React 19 / TypeScript 5
+- pnpm (`packageManager` 필드로 버전 고정)
 - CSS Modules + 순수 CSS (외부 UI 프레임워크 의존성 없음)
 - ESLint 9 (Flat Config, `eslint-config-next`) + Prettier
 

@@ -25,7 +25,7 @@ export function ProjectExperienceRow({ item, index }: PropsWithChildren<{ item: 
 
 function SkillKeywords({ keywords }: PropsWithChildren<{ keywords: string[] }>) {
   return (
-    <div>
+    <div className="skill-keywords">
       <strong>Skill Keywords</strong>
       <div>
         {keywords.map((keyword, index) => (

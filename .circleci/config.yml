@@ -10,4 +10,4 @@ jobs:
       - checkout
       - run:
           name: install & lint & export
-          command: npm ci && npm run export
+          command: corepack enable pnpm && pnpm install --frozen-lockfile && pnpm run export

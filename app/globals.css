@@ -316,3 +316,83 @@ img {
   margin-top: 100px;
   height: 80px;
 }
+
+.pdf-button {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 1000;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 24px;
+  background-color: #3c78d8;
+  color: #fff;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 400;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+.pdf-button:hover {
+  background-color: #2f5fae;
+}
+
+/* ==========================================================================
+   인쇄(PDF 저장) 최적화
+   - 문단/불릿이 페이지 경계에서 잘리지 않는 것이 최우선 목표
+   ========================================================================== */
+@page {
+  margin: 14mm 12mm;
+}
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+
+  /* 뱃지/알림 배경색이 인쇄물에서도 유지되도록 */
+  body {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* 제목 바로 뒤에서 페이지가 넘어가 제목만 남는 것을 방지 */
+  h1,
+  h2,
+  h3,
+  h4 {
+    break-after: avoid-page;
+  }
+
+  /* introduce 문단, 하위 목록이 없는 말단 불릿은 통째로 다음 페이지로 넘긴다 */
+  p,
+  .alert,
+  li:not(:has(li)) {
+    break-inside: avoid;
+  }
+
+  /* 항목 제목(h4/부제)만 페이지 하단에 남고 목록이 다음 장으로 넘어가는 것을 방지 */
+  .col-md-9 ul {
+    break-before: avoid-page;
+  }
+
+  /* "Skill Keywords" 라벨과 뱃지 목록이 분리되지 않게 */
+  .skill-keywords {
+    break-inside: avoid;
+  }
+
+  /* Latest Updated 배지와 서명이 본문 마지막 문단과 분리되지 않게 */
+  p.text-right {
+    break-before: avoid-page;
+  }
+
+  /* 좌측 기간 라벨이 "2024.<줄바꿈>10" 처럼 어색하게 꺾이지 않게 */
+  .col-md-3 h4 {
+    white-space: nowrap;
+  }
+
+  /* 화면용 대형 여백 축소 */
+  .footer-cover {
+    margin-top: 40px;
+  }
+}

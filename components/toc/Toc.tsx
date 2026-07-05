@@ -117,13 +117,13 @@ export function Toc() {
 
   return (
     <>
-      <div className={styles.tocBarContainer} onMouseEnter={() => setIsTocVisible(true)}>
+      <div className={`${styles.tocBarContainer} no-print`} onMouseEnter={() => setIsTocVisible(true)}>
         {sectionIds.map((id) => (
           <div key={id} className={activeSection === id ? styles.progressBarActive : styles.progressBar} />
         ))}
       </div>
       <div
-        className={styles.toc}
+        className={`${styles.toc} no-print`}
         style={{ opacity: isTocVisible ? 1 : 0, pointerEvents: isTocVisible ? 'auto' : 'none' }}
         onMouseLeave={() => setIsTocVisible(false)}
       >
