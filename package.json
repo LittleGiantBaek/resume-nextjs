@@ -7,7 +7,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "export": "rimraf docs .next out && next build && node scripts/postexport.mjs",
+    "export": "rimraf docs out && next build && node scripts/postexport.mjs",
     "clean": "rimraf docs .next out",
     "lint": "eslint ."
   },
