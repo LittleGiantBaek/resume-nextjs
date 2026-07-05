@@ -38,5 +38,6 @@ export const site: SiteConfig = {
     googleAnalyticsId: undefined,
     goatcounterCode: undefined,
   },
-  showPdfButton: true,
+  // TODO: 인쇄(PDF) 시 페이지가 어색하게 나뉘는 부분(보이는 부분) 개선 후 다시 켜기
+  showPdfButton: false,
 };
