@@ -3,4 +3,4 @@
 :HL["https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css","style"]
 :HL["https://fonts.googleapis.com/css?family=Parisienne&display=swap","style"]
 :HL["/profile.jpg","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}},"staleTime":300,"buildId":"cupi13fojnPm1tRdcHgL_"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}},"staleTime":300,"buildId":"XF-O9WM34Bk6dcM1Nceau"}
