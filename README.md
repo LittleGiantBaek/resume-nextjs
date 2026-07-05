@@ -95,7 +95,16 @@ npm run export
   `scripts/postexport.mjs` 가 이를 `docs/` 로 복사하면서 `docs/.nojekyll` 을 만든다.
 - `package.json` 의 `homepage` 가 `*.github.io` 도메인이면 `docs/CNAME` 을 생성하지 않고,
   커스텀 도메인으로 보이면 자동으로 `docs/CNAME` 을 생성한다.
-- GitHub 저장소 설정에서 **Settings → Pages → Source → `master` 브랜치 `/docs` 폴더**를 선택하면 된다.
+
+> **현재 실제 배포 방식**: 라이브 사이트(https://littlegiantbaek.github.io/)는 이 저장소가 아니라
+> 별도 저장소 [`LittleGiantBaek.github.io`](https://github.com/LittleGiantBaek/LittleGiantBaek.github.io)
+> 의 `main` 브랜치 루트에서 서빙된다. 따라서 배포하려면 `docs/` 의 내용을 해당 저장소 루트에 복사해서 push 해야 한다.
+>
+> ```bash
+> npm run export
+> cp -R docs/. ../LittleGiantBaek.github.io/   # Pages 저장소 로컬 경로에 맞게 조정
+> cd ../LittleGiantBaek.github.io && git add -A && git commit -m "deploy" && git push
+> ```
 
 ## 기술 스택
 
