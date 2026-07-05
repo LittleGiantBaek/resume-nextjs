@@ -195,8 +195,9 @@ img {
   margin-right: 0.5rem;
 }
 
-/* 반응형 유틸리티는 동일 특이도의 기본 유틸리티(.text-center 등)를 이겨야 하므로 반드시 뒤에 선언한다 */
-@media (min-width: 768px) {
+/* 반응형 유틸리티는 동일 특이도의 기본 유틸리티(.text-center 등)를 이겨야 하므로 반드시 뒤에 선언한다.
+   인쇄 시에는 지면 폭이 768px 미만이어도 항상 데스크톱 레이아웃을 쓴다 (사진/기간 컬럼 배치 유지) */
+@media print, (min-width: 768px) {
   .col-md-3 {
     flex: 0 0 25%;
     max-width: 25%;

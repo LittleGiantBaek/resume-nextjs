@@ -38,4 +38,5 @@ export const site: SiteConfig = {
     googleAnalyticsId: undefined,
     goatcounterCode: undefined,
   },
+  showPdfButton: true,
 };

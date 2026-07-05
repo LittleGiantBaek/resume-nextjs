@@ -66,8 +66,10 @@ git push
 ## PDF 저장
 
 화면 우측 하단의 **PDF 저장** 버튼을 누르면 브라우저 인쇄 다이얼로그가 열리고, 대상에서 "PDF로 저장"을
-선택하면 된다. `app/globals.css` 의 `@media print` 규칙이 지면을 최적화한다:
+선택하면 된다. 버튼은 `data/site.ts` 의 `showPdfButton: false` 로 숨길 수 있다 (숨겨도 브라우저 인쇄
+`Cmd/Ctrl+P` 로 동일한 인쇄 최적화가 적용된다). `app/globals.css` 의 `@media print` 규칙이 지면을 최적화한다:
 
+- 지면 폭과 무관하게 항상 데스크톱 레이아웃(사진/기간 좌측 컬럼)으로 인쇄된다.
 - 문단·불릿·Skill Keywords 뱃지가 페이지 경계에서 잘리지 않는다.
 - 항목 제목만 페이지 하단에 남는 것(고아 제목)을 방지한다.
 - TOC·PDF 버튼 등 화면 전용 요소는 인쇄물에서 제외된다 (`no-print` 클래스).

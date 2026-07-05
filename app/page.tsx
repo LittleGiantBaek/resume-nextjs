@@ -1,4 +1,5 @@
 import { resume } from '../data';
+import { site } from '../data/site';
 import { SectionRegistry } from '../components/sections/registry';
 import FooterSection from '../components/sections/footer/FooterSection';
 import { Toc } from '../components/toc/Toc';
@@ -14,7 +15,7 @@ export default function HomePage() {
         <FooterSection payload={resume.footer} />
       </div>
       <Toc />
-      <PdfButton />
+      {site.showPdfButton ? <PdfButton /> : null}
     </>
   );
 }

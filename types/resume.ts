@@ -243,6 +243,8 @@ export interface SiteConfig {
   description: string;
   openGraph: SiteOpenGraph;
   analytics: AnalyticsConfig;
+  /** 우하단 "PDF 저장" 플로팅 버튼 표시 여부 */
+  showPdfButton: boolean;
 }
 
 export interface ResumeData {
