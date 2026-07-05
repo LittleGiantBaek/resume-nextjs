@@ -387,9 +387,10 @@ img {
     break-before: avoid-page;
   }
 
-  /* 좌측 기간 라벨이 "2024.<줄바꿈>10" 처럼 어색하게 꺾이지 않게 */
-  .col-md-3 h4 {
-    white-space: nowrap;
+  /* 지면 폭이 좁아도 .container 가 모바일용 max-width(540px 등)로 줄어들지 않게 한다.
+     실제 여백은 @page margin 이 담당한다 */
+  .container {
+    max-width: none;
   }
 
   /* 화면용 대형 여백 축소 */

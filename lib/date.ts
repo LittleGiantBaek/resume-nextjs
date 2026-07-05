@@ -21,10 +21,15 @@ function parseYearMonthDay(value: string): Date {
   return new Date(year, month - 1, day);
 }
 
-/** `YYYY-MM` -> `YYYY. MM` */
+/**
+ * `YYYY-MM` -> `YYYY. MM`
+ *
+ * @description 연도와 월 사이는 NBSP(` `)로 연결해 좁은 지면(인쇄 등)에서도
+ * "2024.<줄바꿈>10" 처럼 날짜 내부가 꺾이지 않게 한다. 줄바꿈은 `~` 앞뒤 일반 공백에서만 일어난다.
+ */
 export function formatYearMonth(value: string): string {
   const date = parseYearMonth(value);
-  return `${date.getFullYear()}. ${pad2(date.getMonth() + 1)}`;
+  return `${date.getFullYear()}. ${pad2(date.getMonth() + 1)}`;
 }
 
 /** `YYYY-MM-DD` -> `YYYY. MM. DD` */
