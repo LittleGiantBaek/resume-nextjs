@@ -1,0 +1,318 @@
+/* ==========================================================================
+   Reset & base
+   ========================================================================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Pretendard, sans-serif;
+  font-weight: 300;
+  word-wrap: break-word;
+  word-break: keep-all;
+  line-height: 1.8;
+  color: #212529;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+ul {
+  padding-left: 2rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+hr {
+  margin: 1rem 0;
+  border: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+a {
+  color: #3c78d8;
+}
+
+small {
+  font-size: 80%;
+}
+
+img {
+  vertical-align: middle;
+}
+
+/* ==========================================================================
+   Minimal Bootstrap 4 grid/utility subset
+   (component 렌더링 로직에서 실제로 사용하는 클래스만 재현했다. 전체 프레임워크 대체가 아님)
+   ========================================================================== */
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+/* 특이도를 (0,1,0)으로 유지해야 뒤에 오는 .col-auto { width: auto } 가 이길 수 있다 */
+.col,
+[class*='col-'] {
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.col {
+  flex-basis: 0;
+  flex-grow: 1;
+  max-width: 100%;
+}
+
+.col-auto {
+  flex: 0 0 auto;
+  width: auto;
+  max-width: 100%;
+}
+
+.col-1 {
+  flex: 0 0 8.333333%;
+  max-width: 8.333333%;
+}
+.col-3 {
+  flex: 0 0 25%;
+  max-width: 25%;
+}
+.col-4 {
+  flex: 0 0 33.333333%;
+  max-width: 33.333333%;
+}
+.col-5 {
+  flex: 0 0 41.666667%;
+  max-width: 41.666667%;
+}
+.col-7 {
+  flex: 0 0 58.333333%;
+  max-width: 58.333333%;
+}
+.col-9 {
+  flex: 0 0 75%;
+  max-width: 75%;
+}
+.col-12 {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
+@media (min-width: 576px) {
+  .col-sm-12 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+.text-right {
+  text-align: right;
+}
+
+.mt-2 {
+  margin-top: 0.5rem;
+}
+.mt-3 {
+  margin-top: 1rem;
+}
+.mt-4 {
+  margin-top: 1.5rem;
+}
+.mt-5 {
+  margin-top: 3rem;
+}
+.pt-2 {
+  padding-top: 0.5rem;
+}
+.pt-3 {
+  padding-top: 1rem;
+}
+.pb-2 {
+  padding-bottom: 0.5rem;
+}
+.pb-3 {
+  padding-bottom: 1rem;
+}
+.mr-1 {
+  margin-right: 0.25rem;
+}
+.mr-2 {
+  margin-right: 0.5rem;
+}
+
+/* 반응형 유틸리티는 동일 특이도의 기본 유틸리티(.text-center 등)를 이겨야 하므로 반드시 뒤에 선언한다 */
+@media (min-width: 768px) {
+  .col-md-3 {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+  .col-md-4 {
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+  }
+  .col-md-9 {
+    flex: 0 0 75%;
+    max-width: 75%;
+  }
+  .col-md-12 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .text-md-right {
+    text-align: right;
+  }
+  .text-md-left {
+    text-align: left;
+  }
+  .mt-md-0 {
+    margin-top: 0 !important;
+  }
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+.rounded {
+  border-radius: 0.25rem;
+}
+
+/* ==========================================================================
+   Alert (Bootstrap alert-secondary 대체)
+   ========================================================================== */
+.alert {
+  position: relative;
+  padding: 0.75rem 1.25rem;
+  margin-bottom: 1rem;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+}
+.alert-secondary {
+  color: #383d41;
+  background-color: #e2e3e5;
+  border-color: #d6d8db;
+}
+
+/* ==========================================================================
+   Badge (Bootstrap badge 대체)
+   ========================================================================== */
+.badge {
+  display: inline-block;
+  padding: 0.25em 0.4em;
+  font-size: 75%;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 0.25rem;
+}
+.badge-pill {
+  border-radius: 10rem;
+  padding-right: 0.6em;
+  padding-left: 0.6em;
+}
+.badge-primary {
+  color: #fff;
+  background-color: #007bff;
+}
+.badge-secondary {
+  color: #fff;
+  background-color: #6c757d;
+}
+.badge-light {
+  color: #212529;
+  background-color: #f8f9fa;
+}
+.badge-info {
+  color: #fff;
+  background-color: #17a2b8;
+}
+.badge-warning {
+  color: #212529;
+  background-color: #ffc107;
+}
+
+/* Skill Keywords 뱃지는 font-weight 를 400 으로 낮춰 본문과의 대비를 줄인다. */
+.skill-keyword-badge {
+  font-weight: 400;
+}
+
+/* ==========================================================================
+   Resume 전용 스타일
+   ========================================================================== */
+.text-blue {
+  color: #3c78d8;
+}
+.text-gray {
+  color: gray;
+}
+.text-sign {
+  font-family: 'Parisienne', cursive;
+  font-size: 1.5em;
+}
+.profile-image {
+  max-height: 320px;
+}
+.footer-cover {
+  background-color: #f5f5f5;
+  padding-left: 0;
+  padding-right: 0;
+  margin-top: 100px;
+  height: 80px;
+}

@@ -5,9 +5,9 @@ jobs:
   build:
     executor:
       name: node/default
-      tag: '20.15.1'
+      tag: '22.x'
     steps:
       - checkout
       - run:
-          name: install & lint build & export
-          command: npm run export:with-typedoc
+          name: install & lint & export
+          command: npm ci && npm run export
